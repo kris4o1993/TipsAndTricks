@@ -45,8 +45,8 @@ function usingFragment() {
 
 function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
-}
+} //returns decimal number (ex. 1,323442)
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+} //returns whole number (example 333)
