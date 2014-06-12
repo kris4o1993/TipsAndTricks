@@ -72,9 +72,10 @@ for (var i = 0; i < count; i++) {
 
     //very complicated formula. DO NOT TOUCH!
     //itemsInBiggestTag => how much times is repeated the most common tag
+    //itemsInCurrentTag => how much times is repeated the currently iterated tag
     //maxFont => what is the maximum font size for the most common tag
     //minFont => what is the minimum font size for the least common tag
-    item.style.fontSize = Math.floor(((tags[i] / itemsInBiggestTag) * (maxFont - minFont)) + minFont) + 'px';
+    item.style.fontSize = Math.floor(((itemsInCurrentTag / itemsInBiggestTag) * (maxFont - minFont)) + minFont) + 'px';
 
     tagCloud.appendChild(item);
 }
