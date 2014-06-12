@@ -54,6 +54,14 @@ function getRandomInt(min, max) {
 
 //------------------------------------------------------------------------------------------//
 
+//getting maximum and minimum element from a collection of integers
+//arr => collection of integers
+max = Math.max.apply(null, arr);
+min = Math.min.apply(null, arr);
+
+
+//------------------------------------------------------------------------------------------//
+
 //tag clould creator (how to determine font size)
 //you have a for loop that iterates through an array of tags and put them into fragment
 //tags => array of tags
