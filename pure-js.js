@@ -62,6 +62,19 @@ min = Math.min.apply(null, arr);
 
 //------------------------------------------------------------------------------------------//
 
+
+//getting random color
+function getRandomColor() {
+        var red = Math.floor(Math.random() * 256),
+            green = Math.floor(Math.random() * 256),
+            blue = Math.floor(Math.random() * 256);
+
+        return 'rgb(' + [red, green, blue].join(',') + ')';
+    }
+
+
+//------------------------------------------------------------------------------------------//
+
 //tag clould creator (how to determine font size)
 //you have a for loop that iterates through an array of tags and put them into fragment
 //tags => array of tags
