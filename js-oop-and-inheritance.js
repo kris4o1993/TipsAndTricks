@@ -67,3 +67,38 @@ var Student = (function () {
 
 var st = new Student('Kris', 18, 12);
 console.log(st.toString());
+
+
+
+//-------------------------------------------------------------------------------------------------------------------
+
+//example validation:
+
+/*globals define*/
+define(function () {
+    'use strict';
+    var Furniture;
+    Furniture = (function () {
+        function isValidManufacturer(manufacturer) {
+            if (typeof manufacturer === 'string') {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+ 
+        function Furniture(manufacturer, price, legs, height) {
+            if (!(isValidManufacturer(manufacturer))) {
+                throw new Error("Manufacturer must be string");
+            }
+            this._manufacturer = manufacturer;
+            this._price = price;
+            this._legs = legs;
+            this._height = height;
+        }
+ 
+        return Furniture;
+    }());
+    return Furniture;
+});
