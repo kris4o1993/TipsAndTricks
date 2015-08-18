@@ -123,3 +123,14 @@ var marks = [2, 3, 4, 5, 6, 6, 4, 2, 3, 4, 4];
 var sum = marks.reduce(function(a, b) { return a + b });
 
 //------------------------------------------------------------------------------------------//
+
+// getting unique GUID id
+function getUniqueId() {
+                function s4() {
+                    return Math.floor((1 + Math.random()) * 0x10000)
+                      .toString(16)
+                      .substring(1);
+                }
+                return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+                  s4() + '-' + s4() + s4() + s4();
+        }
