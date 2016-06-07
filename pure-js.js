@@ -136,6 +136,10 @@ function getUniqueId() {
 }
 
 //------------------------------------------------------------------------------------------//
+//getting the real typeof property
+Object.prototype.toString.call(a).slice(8, -1).toLowerCase();
+
+//------------------------------------------------------------------------------------------//
 
 // battle tag for Blizz games regex
 [a-zA-Z][a-zA-Z0-9]{2,11}#[0-9]{4,5}
