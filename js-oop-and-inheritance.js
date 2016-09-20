@@ -54,7 +54,7 @@ var Student = (function () {
     }
 
     //thats how inheritance works in JS
-    Student.prototype = new Person();
+    Student.prototype = Object.create(Person.prototype);
     Student.prototype.constructor = Student;
 
     //overriding the parent's toString() method
@@ -87,10 +87,22 @@ define(function () {
                 return false;
             }
         }
+        
+        function isValidPrice(price) {
+            if (isNaN(price)) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
  
         function Furniture(manufacturer, price, legs, height) {
             if (!(isValidManufacturer(manufacturer))) {
                 throw new Error("Manufacturer must be string");
+            }
+            if (!(isValidPrice(price))) {
+                throw new Error("Price must be number");
             }
             this._manufacturer = manufacturer;
             this._price = price;
