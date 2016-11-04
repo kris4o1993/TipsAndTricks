@@ -18,8 +18,8 @@ EventHandler.prototype.removeEvent = function(name) {
 
 EventHandler.prototype.executeEvent = function(name) {
     if(this.events['name']) {
-        this.events['name'].forEach(function(element) {
-            element();
+        this.events['name'].forEach(function(callback) {
+            callback();
         }, this);
     }
 }
