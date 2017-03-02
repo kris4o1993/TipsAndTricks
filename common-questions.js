@@ -70,6 +70,16 @@ function a(value) {
 for (var i = 0; i < 5; i++) {
   setTimeout(a(i), i * 1000);  // NOTE: Remove initially defined function!
 }
+
+//v3
+for (var i = 1; i <= 5; i++) {
+    setTimeout(function (i) {
+        return function () {
+            console.log(i);
+        };
+    }(i), 1000 * i);
+}
+
 //======================================
 //'Inheritance'
 //======================================
