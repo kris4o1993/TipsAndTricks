@@ -7,20 +7,17 @@
  
 function Calculator(p) {
 	var param = p;
-	var printDigit = function ()
-	{
+	var printDigit = function () {
 		console.log("Result is", param); 
 		return this;
 	};
 	this.print = printDigit;
-	var addDigit = function (digit)
-	{
+	var addDigit = function (digit) {
 		param = param + digit;
 		return this;
 	};
 	this.add = addDigit;
-	var subDigit = function (digit)
-	{
+	var subDigit = function (digit) {
 		param = param - digit;
 		return this;
 	}
