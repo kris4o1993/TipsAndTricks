@@ -11,10 +11,10 @@ function log(inParam) {
 //======================================
 //'Handle arguments'
 //======================================
-log('hello', 'world', ...); // 'hello world'
+log('hello', 'world', 'kris'); // 'hello world kris'
 
-function a() {
-	console.log(Array.prototype.join.call(arguments, ', ') + ', ...');
+function log() {
+	console.log(Array.prototype.join.call(arguments));
 }
 
 
@@ -35,14 +35,8 @@ function invert(inParam) {
 
 //v1
 String.prototype.invert = function () {
-	console.log(this.toString().split('').reverse().join(''));
+	console.log(this.split('').reverse().join(''));
 }
-
-//v2
-String.prototype.invert = function () {
-	console.log(String.prototype.split.call(this, '').reverse().join(''));
-} // better!
-
 
 //======================================
 //'Bindig'
@@ -84,7 +78,7 @@ for (var i = 1; i <= 5; i++) {
 //'Inheritance'
 //======================================
 // Define the Person constructor
-var Person = function(firstName) {
+function Person (firstName) {
   this.firstName = firstName;
 };
 
